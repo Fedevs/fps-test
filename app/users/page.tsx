@@ -9,7 +9,18 @@ export default function Users() {
           key={user.id}
           className='border rounded px-4 py-2 pointer'
         >
-          <Link href={`users/${user.id}`}>{user.name}</Link>
+          <Link
+            href={{
+              pathname: `users/${user.id}`,
+              query: {
+                name: user.name,
+                email: user.email,
+                transcript: user.transcript,
+              },
+            }}
+          >
+            {user.name}
+          </Link>
         </div>
       ))}
     </section>
