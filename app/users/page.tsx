@@ -11,7 +11,7 @@ export default function Users() {
         {userList.map((user) => (
           <div
             key={user.id}
-            className='border rounded px-4 py-2 pointer'
+            className='rounded px-4 py-2 cursor-pointer bg-red-500 hover:bg-red-700 transition duration-300 font-bold flex items-center'
           >
             <Link
               href={{
